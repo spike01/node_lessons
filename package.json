@@ -1,0 +1,8 @@
+{
+  "name": "Yohorts-first-app",
+  "version": "0.0.1",
+  "description": "We don't know what we're doing!",
+  "dependencies": {
+    "express": "^4.9.5"
+  }
+}

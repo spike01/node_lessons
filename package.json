@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "We don't know what we're doing!",
   "dependencies": {
+    "ejs": "^1.0.0",
     "express": "^4.9.5"
   }
 }

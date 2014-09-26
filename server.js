@@ -1,8 +1,11 @@
 var server = require('express')();
 var http = require('http').Server(server);
+//var ejs = require('ejs');
+server.set('views', __dirname + '/views');
+server.set('view engine', 'ejs');
 
 server.get('/', function(request, response){
-  response.send('<h1>Hello world</h1>');
+  response.render('index');
 });
 
 server.get('/page3', function(request, response){

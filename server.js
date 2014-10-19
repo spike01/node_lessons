@@ -1,6 +1,7 @@
 var server = require('express')();
 var http = require('http').Server(server);
-//var ejs = require('ejs');
+var io = require('socket.io')(http)
+
 server.set('views', __dirname + '/views');
 server.set('view engine', 'ejs');
 
@@ -15,3 +16,8 @@ server.get('/page3', function(request, response){
 http.listen(3000, function(){
   console.log('listening on port 3000');
 });
+
+io.on('connection', function (socket) {
+  socket.emit('news', { text: 'hello world' });
+  });
+

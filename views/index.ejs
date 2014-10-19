@@ -1,1 +1,15 @@
 <h1>This is a ejs index page</h1>
+<div id="div"></div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+$(document).ready(function(){
+
+var socket = io.connect('http://localhost');
+socket.on('news', function (data) {
+    $("#div").append(data.text);
+    });
+});
+</script>

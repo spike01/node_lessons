@@ -11,9 +11,9 @@ var server = http.createServer(function(request, response){
         response.writeHead(200, {'Content-Type': 'text/html'});
         response.write('This is the home page');
         break;
-      case '/page3':
+      case '/page2':
         response.writeHead(200, {'Content-Type': 'text/html'});
-        response.write('Here be birds (falcons, sparrows)');
+        response.write('This is page 2');
         break;
       default:
         response.writeHead(404);

@@ -9,8 +9,12 @@ server.get('/', function(request, response){
   response.render('index');
 });
 
+server.get('/page2', function(request, response){
+  response.send('<h1>This is page 2</h1>');
+});
+
 server.get('/page3', function(request, response){
-  response.send('<h1>The Sun is a terrible newspaper</h1>');
+  response.render('index');
 });
 
 port = process.env.PORT || 3000
